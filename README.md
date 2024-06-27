@@ -99,9 +99,5 @@ In this repo, we'll be creating a **Denoising Diffusion Probabilistic Model (DDP
 - **HTML(animation_ddpm.to_jshtml()) and HTML(animation.to_jshtml()):** displays the animations
 
 > [!NOTE]
-> This code is modified from: https://github.com/cloneofsimo/minDiffusion.
-> Diffusion model is based on Denoising.
-> Diffusion Probabilistic Models and Denoising Diffusion Implicit Models.
-> Type Markdown and LaTeX: 𝛼2.
-
+> This code is modified from, https://github.com/cloneofsimo/minDiffusion. Diffusion model is based on [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) and [Denoising Diffusion Implicit Models](https://arxiv.org/abs/2010.02502). Type Markdown and LaTeX: 𝛼2.
 
