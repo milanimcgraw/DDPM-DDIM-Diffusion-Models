@@ -2,7 +2,7 @@
 
 In this repo, we'll be creating a **Denoising Diffusion Probabilistic Model (DDPM)** from scratch, sampling & training diffusion models, building neural networks for noise prediction, & adding context for personalized image generation. This repo serves as both an educational resource and a practical guide to building and understanding one of the most powerful GenAI models used today. 
 
-**Here,** you will find the overview code components, images of completed code (with outputs--see Denoising-Diffusion-Probabilistic-Model-DDPM-from-Scratch/diffusion model images), and a walkthrough of some of the code. 
+**Here,** you will find the overview code components, sample images, and a walkthrough of some of the code. 
 
 ## ⚙️The Build Process (Deliverables)
 * Implement the basic diffusion algorithm
