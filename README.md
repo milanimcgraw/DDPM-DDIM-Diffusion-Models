@@ -1,4 +1,4 @@
-# 🤖 Building a Diffusion Model from Scratch
+## 🤖 Building a Diffusion Model from Scratch
 
 In this repo, we'll be creating a Denoising Diffusion Probabilistic Model (DDPM) and a Denoising Diffusion Implicit Model (DDIM) from scratch, sampling & training diffusion models, building neural networks for noise prediction, & adding context for personalized image generation. This repo serves as both an educational resource and a practical guide to building and understanding some of the most powerful GenAI models used today.
 
