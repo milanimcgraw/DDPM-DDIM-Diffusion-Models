@@ -30,12 +30,12 @@ proposed by Song et al. (2020) [arXiv:2010.02502](https://arxiv.org/abs/2010.025
 - `pillow`: image processing
 
 ### ⚙️ Imports
-- `from typing import Dict, Tuple`: type hinting capabilities
+- `from typing import Dict, Tuple`: type hinting 
 - `from tqdm import tqdm`: progress bar functionality
 - `import torch`: PyTorch library
-- `import matplotlib.pyplot as plt`: plotting capabilities
+- `import matplotlib.pyplot as plt`: plotting
 - `import numpy as np`: numpy for numerical operations
-- `from IPython.display import HTML`: HTML display functionality (Jupyter notebooks)
+- `from IPython.display import HTML`: HTML display  (Jupyter notebooks)
 
 ### ⚙️ Diffusion Utilities
 
