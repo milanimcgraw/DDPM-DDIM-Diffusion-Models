@@ -1,20 +1,25 @@
 ## 🤖 Building a Diffusion Model from Scratch
 
-In this repo, we'll be creating a Denoising Diffusion Probabilistic Model (DDPM) and a Denoising Diffusion Implicit Model (DDIM) from scratch, sampling & training diffusion models, building neural networks for noise prediction, & adding context for personalized image generation. This repo serves as both an educational resource and a practical guide to building and understanding some of the most powerful GenAI models used today.
+In this repo, we implement **Denoising Diffusion Probabilistic Models** and **Denoising Diffusion Implicit Models** from scratch, using the same generative AI techniques used in image generators like [DALL-E]( https://openai.com/dall-e) and [Stable Diffusion]( https://github.com/CompVis/stable-diffusion). 
 
-Here, you will find the overview code components, sample images, and a walkthrough of some of the code. 
+**This project walks through a complete pipeline:** 
+- implementing the mathematical foundations of both forward and reverse diffusion
+- building and training neural networks (typically U-Net architectures) for noise prediction
+- developing fast sampling algorithms
+- extending the models with conditional generation features (classifier-free guidance and text/image-based prompts) for personalized image creation
 
-> [!NOTE]
-> This code is modified from, [cloneofsimo/minDiffusion](https://github.com/cloneofsimo/minDiffusion). Diffusion model is based on [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) and [Denoising Diffusion Implicit Models](https://arxiv.org/abs/2010.02502). Type Markdown and LaTeX: 𝛼2.
+## **Denoising Diffusion Probabilistic Models** (DDPMs) 
+introduced by Ho et al. (2020) [arXiv:2006.11239](https://arxiv.org/abs/2006.11239), operate by gradually adding Gaussian noise when training images through a forward diffusion process, then learning to reverse the process using a neural network that predicts and removes noise at each timestep to generate high-quality images from pure noise. 
 
-## ⚙️ The Build Process
+## **Denoising Diffusion Implicit Models** (DDIMs)
+proposed by Song et al. (2020) [arXiv:2010.02502](https://arxiv.org/abs/2010.02502), accelerates generation by enabling deterministic, non-Markovian sampling that produces comparable results to DDPMs with significantly fewer denoising steps. 
+
+## Project Overview 
 1. Implement the basic diffusion algorithm.
 2. Construct and train neural networks for noise prediction.
 3. Explore sampling processes, both correct and incorrect.
 4. Extending the model with contextual awareness for personalized image generation.
 5. Add context for personalized image generation.
-
-## Overview 🏗️
 
 ### ⚙️ Dependencies Installation:
 - `torch` and `torchvision`: deep learning/computer vision tasks
@@ -32,7 +37,7 @@ Here, you will find the overview code components, sample images, and a walkthrou
 - `import numpy as np`: numpy for numerical operations
 - `from IPython.display import HTML`: HTML display functionality (Jupyter notebooks)
 
-### 🛠️ Diffusion Utilities:
+### ⚙️ Diffusion Utilities:
 - `class UnetUp(nn.Module)`: defines upsampling block for U-Net architecture, uses `ConvTranspose2d` for upsampling, `ResidualConvBlock` for feature processing
 - `class UnetDown(nn.Module)`: defines downsampling block U-Net architecture, `ResidualConvBlock` and `MaxPool2d` for downsampling
 - `class EmbedFC(nn.Module)`: implements feed-forward neural network for embedding, converts input data to a different dimensional space
@@ -113,4 +118,8 @@ start_time = time.time()
 samples_ddim, _ = sample_ddim(n_samples)
 ddim_time = time.time() - start_time
 print(f"DDIM sampling time: {ddim_time:.2f} seconds")```
+
+---
+> ## 📌 Credits
+> This code is modified from, [cloneofsimo/minDiffusion](https://github.com/cloneofsimo/minDiffusion). Diffusion model is based on [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) and [Denoising Diffusion Implicit Models](https://arxiv.org/abs/2010.02502). Type Markdown and LaTeX: 𝛼2.
 
